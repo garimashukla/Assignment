@@ -39,14 +39,11 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun getRequest() {
-
-          //showProgressDialog(this, "Loading Class...")
-
         val Base_URL ="https://gorest.co.in/public-api/users"
 
             val mStrRequest: StringRequest = object : StringRequest(Method.GET, Base_URL,
                 Response.Listener { response ->
-                   // utilobj.hideProgressDialog()
+
                     Log.d("VOLLEY_RESPONSE_CLASS", response)
                     Log.d("URL", Base_URL)
                     val jsonObject: JSONObject
@@ -94,7 +91,7 @@ class MainActivity : AppCompatActivity() {
 
                 },
                 Response.ErrorListener { error ->
-                  //  utilobj.hideProgressDialog()
+
                     if (error is NoConnectionError) {
                     } else {
                     }
